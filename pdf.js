@@ -9595,6 +9595,12 @@ if (typeof PDFJS === 'undefined') {
 
 // Support: IE<10, Android<4.0, iOS
 (function checkRequestAnimationFrame() {
+  // Moved this up to be the very first check: don't overwrite a thing if it's not necessary! 
+  // (as of this date, requestAnimationFrame is working very nice in iOS)
+  if ('requestAnimationFrame' in window) {
+    return;
+  }
+
   function fakeRequestAnimationFrame(callback) {
     window.setTimeout(callback, 20);
   }
@@ -9603,9 +9609,6 @@ if (typeof PDFJS === 'undefined') {
   if (isIOS) {
     // requestAnimationFrame on iOS is broken, replacing with fake one.
     window.requestAnimationFrame = fakeRequestAnimationFrame;
-    return;
-  }
-  if ('requestAnimationFrame' in window) {
     return;
   }
   window.requestAnimationFrame =
@@ -17479,7 +17482,7 @@ function webViewerInitialized() {
 
 // document.addEventListener('DOMContentLoaded', webViewerLoad, true);
 PDFJS.webViewerLoad = function (src) {
-  if (src) DEFAULT_URL = src;
+  DEFAULT_URL = src;
 
   webViewerLoad();
 }

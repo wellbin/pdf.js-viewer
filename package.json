@@ -1,6 +1,6 @@
 {
-  "name": "pdf.js-dist",
-  "version": "0.1.0",
+  "name": "antena-pdf.js-viewer",
+  "version": "0.2.8",
   "description": "Compiled version of pdf.js",
   "main": "pdf.js",
   "scripts": {
