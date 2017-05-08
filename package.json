@@ -1,6 +1,6 @@
 {
   "name": "antena-pdf.js-viewer",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Compiled version of pdf.js",
   "main": "pdf.js",
   "scripts": {
@@ -24,4 +24,3 @@
     "css-prefix": "git+https://github.com/moesjarraf/css-prefix.git#0.0.2+moesjarraf.3"
   }
 }
-
