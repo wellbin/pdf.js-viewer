@@ -1,5 +1,5 @@
 {
-  "name": "antena-pdf.js-viewer",
+  "name": "@wellbin/antena-pdf.js-viewer",
   "version": "0.2.9",
   "description": "Compiled version of pdf.js",
   "main": "pdf.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/legalthings/pdf.js-dist.git"
+    "url": "https://github.com/wellbin/pdf.js-viewer.git"
   },
   "keywords": [
     "pdf"
